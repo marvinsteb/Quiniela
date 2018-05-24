@@ -4,11 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use Illuminate\Support\Facades\Redirect;
-
 use App\Http\Requests;
 
-class LigaController extends Controller
+class MFinalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +15,7 @@ class LigaController extends Controller
      */
     public function index()
     {
-        return view('liga/index');
+        return view('marcador/indexmarcadorfinal');
     }
 
     /**
@@ -26,19 +24,9 @@ class LigaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    { 
-        return view('liga/Crear');
-    }
-    public function CrearApuesta()
     {
-        return view('liga/CrearApuesta');
+        //
     }
-
-    public function unirse()
-    { 
-        return view('liga/Unirse');
-    }
-
 
     /**
      * Store a newly created resource in storage.
@@ -48,7 +36,7 @@ class LigaController extends Controller
      */
     public function store(Request $request)
     {
-        return Redirect::to('marcador');
+        //
     }
 
     /**

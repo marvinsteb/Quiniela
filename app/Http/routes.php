@@ -18,5 +18,10 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
-//Route::get('/liga/unirse','LigaController@unirse');
+
+Route::get('/liga/unirse','LigaController@unirse');
+Route::get('/liga/crearparaapuesta','LigaController@CrearApuesta');
 Route::resource('/liga','LigaController');
+
+Route::resource('/marcador/final','MFinalController');
+Route::resource('/marcador','MarcadorController');

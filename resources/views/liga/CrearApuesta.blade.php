@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<main role="main">
+    <main role="main">
         <div class="container">
           <div class="row" >
             <div class="col-md-12 tamanio" >          
@@ -21,7 +21,7 @@
           {!!Form::open(array('url'=>'liga','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
             {{Form::token()}}
 
-        <div class="row">
+            <div class="row">
                   <div class="col-md-4">
                   </div>  
                   <div class="col-md-4">
@@ -52,6 +52,20 @@
             <div class="row">
                   <div class="col-md-4">
                   </div>
+                  <div class="col-md-4">
+                    <div class="radio">
+                      <label><input type="radio" name="optradio" checked>De apuesta</label>
+                    </div>
+                  </div >
+            </div>
+            <div class="row">
+                  <div class="col-md-4">
+                  </div>
+                  <div class="col-md-4">
+                     <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Precio de participación: Q." aria-label="PrecioParticipacion" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
             </div>
             <div class="row">
                   <div class="col-md-4">
@@ -68,7 +82,7 @@
          {!!Form::close()!!}
 
               
+          </form>
         </div>
       </main>
-
 @endsection

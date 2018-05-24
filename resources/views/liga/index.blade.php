@@ -16,8 +16,17 @@
                     
                   </div>
                   <div class="col-md-5">
-                        <a href="{{ url('/liga/create') }}" class="btn btn-danger">Crear Liga</a>                    
-                      <a href="{{ url('/liga/unirse') }}" class="btn btn-danger">Unirse a una liga</a>
+                  <div class ="row">
+                  <a href="{{ url('/liga/create') }}" class="btn btn-danger">Crear liga por diversión</a>
+                  </div> 
+                  <br>
+                  <div class ="row">  
+                  <a href="{{ url('/liga/crearparaapuesta') }}" class="btn btn-danger">Crear liga de apuestas</a>    
+                  </div>
+                  <br>
+                  <div class ="row"> 
+                  <a href="{{ url('/liga/unirse') }}" class="btn btn-danger">Unirse a una liga</a>    
+                  </div>                               
                   </div>
               </div>  
           </div>
