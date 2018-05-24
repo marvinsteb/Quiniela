@@ -64,7 +64,8 @@
     <footer class="text-muted">
       <div class="container">
         <p>
-        <img src="images/banderas.png" >
+        <img src="{{ asset('images/banderas.png') }}">
+        
 
           
         </p>
