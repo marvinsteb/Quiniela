@@ -18,7 +18,7 @@
               </div>
             </div>
           </div>
-          <form action="/action_unirse_liga.php">
+          <form action="/marcador">
             <div class="row">
                   <div class="col-md-4">
                   </div>  

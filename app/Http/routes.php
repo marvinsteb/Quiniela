@@ -27,6 +27,7 @@ Route::resource('/liga','LigaController');
 Route::resource('/marcador','MarcadorController');
 Route::resource('/ganador','GanadoresController');
 Route::resource('/final','MFinalController');
+
 Route::get('/ganadores/lista','listarGanadoresController@ListaGanadores');
 Route::get('/ganadores/liga','listarGanadoresController@LigasGanadoras');
 Route::resource('/ganadores','listarGanadoresController');

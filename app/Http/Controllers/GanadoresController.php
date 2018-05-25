@@ -15,7 +15,7 @@ class GanadoresController extends Controller
      */
     public function index()
     {
-        return view('ganador/indexganador');
+        return view('ganador/indexganadores');
     }
 
     /**

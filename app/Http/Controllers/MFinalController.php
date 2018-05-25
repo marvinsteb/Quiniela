@@ -37,7 +37,7 @@ class MFinalController extends Controller
      */
     public function store(Request $request)
     {
-        return Redirect::to('marcador/final/ganador'); 
+        return Redirect::to('ganadores'); 
     }
 
     /**

@@ -19,7 +19,7 @@
             </div>
 
 
-    				{!!Form::open(array('url'=>'ganadores','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
+    				{!!Form::open(array('url'=>'final','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
             {{Form::token()}}   
           		<!-- OCTAVOS DE FINAL-->
             	<div class="row">
