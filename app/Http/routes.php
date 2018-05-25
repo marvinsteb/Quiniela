@@ -23,5 +23,11 @@ Route::get('/liga/unirse','LigaController@unirse');
 Route::get('/liga/crearparaapuesta','LigaController@CrearApuesta');
 Route::resource('/liga','LigaController');
 
-Route::resource('/marcador/final','MFinalController');
+
 Route::resource('/marcador','MarcadorController');
+Route::resource('/ganador','GanadoresController');
+Route::resource('/final','MFinalController');
+Route::get('/ganadores/lista','listarGanadoresController@ListaGanadores');
+Route::get('/ganadores/liga','listarGanadoresController@LigasGanadoras');
+Route::resource('/ganadores','listarGanadoresController');
+

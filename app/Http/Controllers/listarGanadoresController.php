@@ -3,11 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Requests;
 
-class MFinalController extends Controller
+class listarGanadoresController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +15,15 @@ class MFinalController extends Controller
      */
     public function index()
     {
-        return view('marcador/indexmarcadorfinal');
+        return view('ganador/indexganadores');
+    }
+    public function ListaGanadores()
+    {
+        return view('ganador/ganadores');
+    }
+    public function LigasGanadoras()
+    {
+        return view('ganador/liga');
     }
 
     /**
@@ -37,7 +44,7 @@ class MFinalController extends Controller
      */
     public function store(Request $request)
     {
-        return Redirect::to('marcador/final/ganador'); 
+        //
     }
 
     /**
