@@ -3,28 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests;
 
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Auth;
 
-use App\Http\Requests;
+use App\Http\Requests\LigaFormRequest;
+use App\Liga;
+use App\UsuarioPorLiga;
+use DB;
+use Response;
+use Illuminate\Support\Collection; 
 
 class LigaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
         return view('liga/index');
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     { 
         return view('liga/Crear');
@@ -48,6 +49,24 @@ class LigaController extends Controller
      */
     public function store(Request $request)
     {
+        $user = Auth::user();
+        $liga = new Liga;
+        $usuario = new UsuarioPorLiga;
+
+        $liga->Nombre = $request->get('nombre');
+        $liga->Sede = $request->get('sede');
+        $liga->Year = $request->get('anio');
+        $liga->EsApuesta = 0;
+        $liga->save();
+
+        
+        $usuario->IdLiga =  $liga->IdLiga;
+        $usuario->IdUsuario = Auth::id();
+        $usuario->IsAdmin = 1;
+        $usuario->save();
+
+    
+       
         return Redirect::to('marcador');
     }
 

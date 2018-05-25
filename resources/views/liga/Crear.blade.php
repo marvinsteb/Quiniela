@@ -26,7 +26,7 @@
                   </div>  
                   <div class="col-md-4">
                     <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Identificador" aria-label="Id" aria-describedby="basic-addon1">
+                      <input name = 'nombre' type="text" class="form-control" placeholder="Nombre" aria-label="Id" aria-describedby="basic-addon1">
                     </div>
                   </div> 
             </div>
@@ -35,7 +35,16 @@
                   </div>
                   <div class="col-md-4">
                      <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Nombre" aria-label="NombreLiga" aria-describedby="basic-addon1">
+                        <input name = 'sede' type="text" class="form-control" placeholder="Sede" aria-label="Id" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="col-md-4">
+                  </div>
+                  <div class="col-md-4">
+                     <div class="form-group">
+                        <input name = 'anio' type="text" class="form-control" placeholder="Año" aria-label="Id" aria-describedby="basic-addon1">
                     </div>
                   </div>
             </div>

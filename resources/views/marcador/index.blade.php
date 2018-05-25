@@ -20,6 +20,19 @@
 
     				{!!Form::open(array('url'=>'marcador','method'=>'POST','autocomplete'=>'off','files'=>'true'))!!}
             {{Form::token()}}
+
+						   <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+								<div class="form-group">
+									<label>liga</label>
+									<select name="idliga" class="form-control">
+										<option value="" disabled selected>Selecciona Una Liga</option>
+										@foreach($ligas as $liga)	
+											<option value="{{$liga->IdLiga}}">{{$liga->Nombre}}</option>
+										@endforeach            
+									</select>
+								</div>        
+								</div>
+
             	<div class="row">
                 	<div class="col-md-6">
                 		<h3>Grupo A</h3>
@@ -37,12 +50,12 @@
 						      <td style="width: 150px">Rusia</td>
 						      <td>
 						      	<div class="input-group input-group-sm mb-3">
-									<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
+									<input name = 'resutadogrupoAequipo11' type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
 								</div>
 						      </td>
 						      <td>
 						      	<div class="input-group input-group-sm mb-3">
-									<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
+									<input name = 'resutadogrupoAequipo12' type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
 								</div>
 						      </td>
 						      <td style="width: 150px">A. Saudita</td>
@@ -51,12 +64,12 @@
 						      <td style="width: 150px">Egipto</td>
 						      <td>
 						      	<div class="input-group input-group-sm mb-3">
-									<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
+									<input name = 'resutadogrupoAequipo21' type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
 								</div>
 						      </td>
 						      <td>
 						      	<div class="input-group input-group-sm mb-3">
-									<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
+									<input name = 'resutadogrupoAequipo22'  type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" size="3">
 								</div>
 						      </td>
 						      <td style="width: 150px">Uruguay</td>
